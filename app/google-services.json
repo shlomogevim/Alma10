@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "101949823604",
+    "project_id": "alma10-16bad",
+    "storage_bucket": "alma10-16bad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:101949823604:android:5cdfd5f96e67663ac60f21",
+        "android_client_info": {
+          "package_name": "com.sg.alma10"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "101949823604-at4vkrmrbh6poq1nssfd72g65u8t46sl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCttIizVra21cJF3IdPTyu0F3DjJOqjYrw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "101949823604-at4vkrmrbh6poq1nssfd72g65u8t46sl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
