@@ -8,7 +8,7 @@
 
     android:keepScreenOn="true"
 
-    tools:context=".AddPostActivity">
+    tools:context=".activities.AddPostActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -27,7 +27,8 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone">
         <Button
             android:id="@+id/btn1"
             android:layout_width="0dp"

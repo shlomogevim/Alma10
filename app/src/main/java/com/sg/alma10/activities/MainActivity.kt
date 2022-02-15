@@ -1,4 +1,4 @@
-package com.sg.alma10
+package com.sg.alma10.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.sg.alma10.R
 import com.sg.alma10.databinding.ActivityMainBinding
 import com.sg.alma10.fragment.HomeFragment
 import com.sg.alma10.fragment.NotificationFragment
@@ -55,8 +56,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        binding.navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
-        moveToFragment(HomeFragment())
+        /*binding.navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
+        moveToFragment(HomeFragment())*/
+        startActivity(Intent(this, AddPostActivity::class.java))
 
         onBackPressedDispatcher?.addCallback(this,object : OnBackPressedCallback(true){
             override fun handleOnBackPressed() {

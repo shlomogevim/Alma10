@@ -7,7 +7,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import coil.load
 import com.sg.alma10.Posts.NineLinePost
 import com.sg.alma10.R
-import com.sg.alma10.utilities.CONSTANT
+import com.sg.alma10.utilities.CONSTANT_COLOR
 
 class Post6Lines (val context: Context) {
 
@@ -38,15 +38,18 @@ class Post6Lines (val context: Context) {
         val paddingA = arrayOf(5, 0, 5, 0)
         // val textSizeA = arrayOf(0, 25)
         val textSizeA = arrayOf(1, 27, 27, 27, 33, 27, 27)
-        //val textColorA = arrayOf(CONSTANT, "#f6ff03")
+        //val textColorA = arrayOf(CONSTANT_COLOR, "#f6ff03")
         val col = "#f6ff03"
         val col1 = "#1de9b6"
-        val textColorA = arrayOf(CONSTANT, col, col, col, col, col, col1)
+        val textColorA = arrayOf(CONSTANT_COLOR, col, col, col, col, col, col1)
 
         nineLinesPost.createPost(
             lineNum, backGround, tranparency, lineA, marginA, paddingA, textSizeA, textColorA,
             radius = 15
         )
+
+
+
     }
 
     fun post61() {
@@ -73,10 +76,10 @@ class Post6Lines (val context: Context) {
         val paddingA = arrayOf(10, 0, 10, 0)
         // val textSizeA = arrayOf(0, 25)
         val textSizeA = arrayOf(1, 30, 25, 25, 25, 25, 25)
-        //val textColorA = arrayOf(CONSTANT, "#f6ff03")
+        //val textColorA = arrayOf(CONSTANT_COLOR, "#f6ff03")
         val col = "#f6ff03"
         val col1 = "#1de9b6"
-        val textColorA = arrayOf(CONSTANT, col, col, col, col, col, col1)
+        val textColorA = arrayOf(CONSTANT_COLOR, col, col, col, col, col, col1)
 
         nineLinesPost.createPost(
             lineNum, backGround, tranparency, lineA, marginA, paddingA, textSizeA, textColorA,
@@ -101,9 +104,9 @@ class Post6Lines (val context: Context) {
         val paddingA = arrayOf(0, 0, 0, 0)
         val textSizeA = arrayOf(0, 24)
         val col = "#007591"
-        val textColorA = arrayOf(CONSTANT, col, col)
+        val textColorA = arrayOf(CONSTANT_COLOR, col, col)
 
-        nineLinesPost.createPost(
+        nineLinesPostNew.createPost(
             lineNum, backGround, transparency, lineA, marginA, paddingA, textSizeA, textColorA,
             radius = 15, fontFamily = 240
         )
@@ -134,7 +137,7 @@ class Post6Lines (val context: Context) {
         val paddingA = arrayOf(10, 0, 10, 0)
         val textSizeA = arrayOf(0, 27, 25, 25, 25, 25, 25)
         val col = "#F4611E"
-        val textColorA = arrayOf(CONSTANT, col, col, col, col, col, col)
+        val textColorA = arrayOf(CONSTANT_COLOR, col, col, col, col, col, col)
 
         nineLinesPost.createPost(
             lineNum, backGround, tranparency, lineA, marginA, paddingA, textSizeA, textColorA,
@@ -169,7 +172,7 @@ class Post6Lines (val context: Context) {
         val paddingA = arrayOf(0, 0, 0, 0)
         val textSizeA = arrayOf(0,24)
         val col = "#007591"
-        val textColorA = arrayOf(CONSTANT, col, col)
+        val textColorA = arrayOf(CONSTANT_COLOR, col, col)
 
         nineLinesPost.createPost(
             lineNum, backGround, tranparency, lineA, marginA, paddingA, textSizeA, textColorA,

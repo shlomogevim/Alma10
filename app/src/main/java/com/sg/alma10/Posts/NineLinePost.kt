@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.content.res.ResourcesCompat
-import com.sg.alma10.utilities.CONSTANT
+import com.sg.alma10.utilities.CONSTANT_COLOR
 import com.sg.alma10.utilities.Helper
 
 
@@ -48,7 +48,7 @@ class NineLinePost(val contex: Context, val layout: ConstraintLayout) {
 
         val textView1 = TextView(contex)
         textView1.text = strings[0]
-        if (textColorArray[0] == CONSTANT) {
+        if (textColorArray[0] == CONSTANT_COLOR) {
             textView1.setTextColor(Color.parseColor(textColorArray[1]))
         } else {
             textView1.setTextColor(Color.parseColor(textColorArray[1]))
@@ -79,7 +79,7 @@ class NineLinePost(val contex: Context, val layout: ConstraintLayout) {
             }
             textView2.id = View.generateViewId()
             textView2.typeface = ResourcesCompat.getFont(contex, fontAddress)
-            if (textColorArray[0] == CONSTANT) {
+            if (textColorArray[0] == CONSTANT_COLOR) {
                 textView2.setTextColor(Color.parseColor(textColorArray[1]))
             } else {
                 textView2.setTextColor(Color.parseColor(textColorArray[2]))
@@ -103,7 +103,7 @@ class NineLinePost(val contex: Context, val layout: ConstraintLayout) {
             }
             textView3.id = View.generateViewId()
             textView3.typeface = ResourcesCompat.getFont(contex, fontAddress)
-            if (textColorArray[0] == CONSTANT) {
+            if (textColorArray[0] == CONSTANT_COLOR) {
                 textView3.setTextColor(Color.parseColor(textColorArray[1]))
             } else {
                 textView3.setTextColor(Color.parseColor(textColorArray[3]))
@@ -127,7 +127,7 @@ class NineLinePost(val contex: Context, val layout: ConstraintLayout) {
             }
             textView4.id = View.generateViewId()
             textView4.typeface = ResourcesCompat.getFont(contex, fontAddress)
-            if (textColorArray[0] == CONSTANT) {
+            if (textColorArray[0] == CONSTANT_COLOR) {
                 textView4.setTextColor(Color.parseColor(textColorArray[1]))
             } else {
                 textView4.setTextColor(Color.parseColor(textColorArray[4]))
@@ -148,7 +148,7 @@ class NineLinePost(val contex: Context, val layout: ConstraintLayout) {
             } else {
                 textView5.textSize = textSizeArray[5].toFloat()
             }
-            if (textColorArray[0] == CONSTANT) {
+            if (textColorArray[0] == CONSTANT_COLOR) {
                 textView5.setTextColor(Color.parseColor(textColorArray[1]))
             } else {
                 textView5.setTextColor(Color.parseColor(textColorArray[5]))
@@ -172,7 +172,7 @@ class NineLinePost(val contex: Context, val layout: ConstraintLayout) {
             } else {
                 textView6.textSize = textSizeArray[6].toFloat()
             }
-            if (textColorArray[0] == CONSTANT) {
+            if (textColorArray[0] == CONSTANT_COLOR) {
                 textView6.setTextColor(Color.parseColor(textColorArray[1]))
             } else {
                 textView6.setTextColor(Color.parseColor(textColorArray[6]))
@@ -197,7 +197,7 @@ class NineLinePost(val contex: Context, val layout: ConstraintLayout) {
                 textView7.textSize = textSizeArray[7].toFloat()
             }
             textView7.id = View.generateViewId()
-            if (textColorArray[0] == CONSTANT) {
+            if (textColorArray[0] == CONSTANT_COLOR) {
                 textView7.setTextColor(Color.parseColor(textColorArray[1]))
             } else {
                 textView7.setTextColor(Color.parseColor(textColorArray[7]))
@@ -219,7 +219,7 @@ class NineLinePost(val contex: Context, val layout: ConstraintLayout) {
             } else {
                 textView8.textSize = textSizeArray[8].toFloat()
             }
-            if (textColorArray[0] == CONSTANT) {
+            if (textColorArray[0] == CONSTANT_COLOR) {
                 textView8.setTextColor(Color.parseColor(textColorArray[1]))
             } else {
                 textView8.setTextColor(Color.parseColor(textColorArray[8]))
@@ -243,7 +243,7 @@ class NineLinePost(val contex: Context, val layout: ConstraintLayout) {
             } else {
                 textView9.textSize = textSizeArray[9].toFloat()
             }
-            if (textColorArray[0] == CONSTANT) {
+            if (textColorArray[0] == CONSTANT_COLOR) {
                 textView9.setTextColor(Color.parseColor(textColorArray[1]))
             } else {
                 textView9.setTextColor(Color.parseColor(textColorArray[9]))

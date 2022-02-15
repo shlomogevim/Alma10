@@ -17,10 +17,10 @@
             android:name=".CreatePostView"
             android:exported="false" />
         <activity
-            android:name=".AddPostActivity"
+            android:name=".activities.AddPostActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

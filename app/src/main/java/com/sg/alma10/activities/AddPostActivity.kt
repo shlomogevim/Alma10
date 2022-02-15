@@ -1,26 +1,26 @@
-package com.sg.alma10
+package com.sg.alma10.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.google.firebase.firestore.FirebaseFirestore
-import com.sg.alma10.Posts.NineLinePost
-import com.sg.alma10.Posts.general.Post6Lines
+import com.sg.alma10.Posts.NineLinePostNew
+import com.sg.alma10.Posts.general.Post6LinesNew
 import com.sg.alma10.databinding.ActivityAddPostBinding
-import java.util.ArrayList
+import com.sg.alma10.utilities.Utility
 
 class AddPostActivity : AppCompatActivity() {
 
     lateinit var binding:ActivityAddPostBinding
 
-    lateinit var nineLinesPost: NineLinePost
-    lateinit var post6Lines: Post6Lines
+    lateinit var nineLinesPostNew: NineLinePostNew
+    lateinit var post6LinesNew: Post6LinesNew
+
+    val util=Utility()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityAddPostBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
+      setContentView(binding.root)
 
       /*  var arr=ArrayList<String>()
         arr= arrayListOf("loki","toti","lofi")
@@ -28,39 +28,46 @@ class AddPostActivity : AppCompatActivity() {
         data["bolo1"]=arr
         FirebaseFirestore.getInstance().collection("First try").add(data)*/
 
+        nineLinesPostNew = NineLinePostNew(this, binding.mainLayout)
 
-        nineLinesPost = NineLinePost(this, binding.mainLayout)
-        post6Lines = Post6Lines(this)
+        post6LinesNew = Post6LinesNew(this)
 
-      operateBtn()
+     //  util.logi("AadPostActivity11")
+
+          //    post6LinesNew.post600()
+            // post6LinesNew.post601()
+            //    post6LinesNew.post602()
+        post6LinesNew.post603()
+
+      // operateBtn()
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
 
     private fun operateBtn(){
     binding.btn1.setOnClickListener {
-            post6Lines.post61()
+            post6LinesNew.post600()
       }
         binding.btn2.setOnClickListener {
-            post6Lines.post63()
+            post6LinesNew.post602()
         }
         binding.btn3.setOnClickListener {
-            post6Lines.post662()
+            post6LinesNew.post603()
         }
 
 
     }
-
-
-
-  /*class Post6Lines (val context: Context) {
-
-    private val image: ImageView =(context as Activity).findViewById(R.id.imageView)
-    private val layout: ConstraintLayout =(context as Activity).findViewById(R.id.mainLayout)
-    private val nineLinesPost= NineLinePost(context , layout)
-    val lineNum = 6*/
-
-
-
 
 
    /* fun post662() {
@@ -90,9 +97,9 @@ class AddPostActivity : AppCompatActivity() {
         val paddingA = arrayOf(0, 0, 0, 0)
         val textSizeA = arrayOf(0,24)
         val col = "#007591"
-        val textColorA = arrayOf(CONSTANT, col, col)
+        val textColorA = arrayOf(CONSTANT_COLOR, col, col)
 
-        nineLinesPost.createPost(
+        nineLinesPostNew.createPost(
             lineNum, backGround, tranparency, lineA, marginA, paddingA, textSizeA, textColorA,
             radius = 15,fontFamily = 240
         )
