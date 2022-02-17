@@ -1,5 +1,6 @@
 package com.sg.alma10.utilities
 
+import coil.load
 import com.sg.alma10.R
 
 class Helper {
@@ -209,4 +210,33 @@ class Helper {
 
             else-> R.font.a220_davidlibre_regular
         }
+    fun post201() {
+        val lineNum = 2
+        val imageUri = "https://cdn.pixabay.com/photo/2017/11/04/14/25/pinocchio-2917652_1280.jpg"
+     //   image.load(imageUri)
+        val postText = arrayOf(
+            "  לאמת פנים רבות  ",
+            "  אחד מהם הוא השקר."
+        )
+        val dd=0
+        val du=0
+        val marginA = arrayOf(
+            arrayOf(0, 10+du, 0, -1+dd),
+            arrayOf(0, 50+du, 0, -1+dd)
+        )
+        val backGround = "263238"
+        val transparency =2
+        val size1=26
+        val size2=28
+        val textSizeA = arrayOf(0,size1,size2,size2, size2,size2, size2)
+        val paddingA = arrayOf(0, 0,0, 0)
+        val col ="#a7aba8"
+        val col1 = "#F4611E"
+        val textColorA = arrayOf(CONSTANT_COLOR, col, col1, col1, col1, col1, col1)
+        val fontFamily=100
+        val radius=5
+  /*    nineLinesPost.createPost(
+            lineNum,postText,backGround,transparency,marginA,paddingA,textSizeA,textColorA,fontFamily,radius
+        )*/
+    }
 }

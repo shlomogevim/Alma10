@@ -2,8 +2,10 @@ package com.sg.alma10.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.sg.alma10.Posts.NineLinePostNew
-import com.sg.alma10.Posts.general.Post6LinesNew
+import com.sg.alma10.Posts.PostGenerator
+import com.sg.alma10.Posts.general.Post1Lines
+import com.sg.alma10.Posts.general.Post2Lines
+import com.sg.alma10.Posts.general.Post6Lines
 import com.sg.alma10.databinding.ActivityAddPostBinding
 import com.sg.alma10.utilities.Utility
 
@@ -11,8 +13,10 @@ class AddPostActivity : AppCompatActivity() {
 
     lateinit var binding:ActivityAddPostBinding
 
-    lateinit var nineLinesPostNew: NineLinePostNew
-    lateinit var post6LinesNew: Post6LinesNew
+    lateinit var nineLinesPost: PostGenerator
+    lateinit var post1Lines: Post1Lines
+    lateinit var post2Lines: Post2Lines
+    lateinit var post6Lines: Post6Lines
 
     val util=Utility()
 
@@ -28,18 +32,36 @@ class AddPostActivity : AppCompatActivity() {
         data["bolo1"]=arr
         FirebaseFirestore.getInstance().collection("First try").add(data)*/
 
-        nineLinesPostNew = NineLinePostNew(this, binding.mainLayout)
+        nineLinesPost = PostGenerator(this, binding.mainLayout)
 
-        post6LinesNew = Post6LinesNew(this)
+        post1Lines = Post1Lines(this)
+        post2Lines = Post2Lines(this)
+        post6Lines = Post6Lines(this)
 
-     //  util.logi("AadPostActivity11")
 
-          //    post6LinesNew.post600()
-            // post6LinesNew.post601()
-            //    post6LinesNew.post602()
-        post6LinesNew.post603()
+      //  post1Lines.post100()
+       // post1Lines.post101()
+       //post1Lines.post102()
 
-      // operateBtn()
+       // post2Lines.post200()
+     //  post2Lines.post201()
+      //  post2Lines.post202()
+    //post2Lines.post203()
+      //post2Lines.post204()
+      //post2Lines.post205()
+     // post2Lines.post206()
+   //   post2Lines.post207()
+    //  post2Lines.post208()
+   //  post2Lines.post209()
+      post2Lines.post210()
+
+
+          //    post6Lines.post600()
+            // post6Lines.post601()
+            //    post6Lines.post602()
+        //   post6Lines.post603()
+
+
 
     }
 
@@ -57,13 +79,13 @@ class AddPostActivity : AppCompatActivity() {
 
     private fun operateBtn(){
     binding.btn1.setOnClickListener {
-            post6LinesNew.post600()
+            post6Lines.post600()
       }
         binding.btn2.setOnClickListener {
-            post6LinesNew.post602()
+            post6Lines.post602()
         }
         binding.btn3.setOnClickListener {
-            post6LinesNew.post603()
+            post6Lines.post603()
         }
 
 
