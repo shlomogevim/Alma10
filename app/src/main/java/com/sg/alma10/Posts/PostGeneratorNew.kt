@@ -56,7 +56,7 @@ class PostGeneratorNew(val contex: Context, val layout: ConstraintLayout) {
      //   util.logi("postGenerator9 ==> /n textColorArray[0]= ${textColorArray[0]}")
         val textView1 = TextView(contex)
         textView1.text = postText[0]
-       util.logi("postGenerator10 ==> /n textColorArray[0]= ${textColorArray[0]}")
+     //  util.logi("postGenerator10 ==> /n textColorArray[0]= ${textColorArray[0]}")
         if (textColorArray[0] == CONSTANT_COLOR) {
             textView1.setTextColor(Color.parseColor(textColorArray[1]))
         } else {

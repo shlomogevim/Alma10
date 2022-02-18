@@ -5,8 +5,10 @@ data class Post(
     var postNum:Int=1,
     var lineNum: Int =1,
     var imageUri:String="",
-    var postText: Array<String> = arrayOf<String>(),
-    var postMargin:Array<Array<Int>> = arrayOf<Array<Int>>(),
+
+    var postText: ArrayList<String> = arrayListOf<String>(),
+
+    var postMargin: Array<ArrayList<Int>> = arrayOf<ArrayList<Int>>(),
     var postBackground:String="",
     var postTransparency:Int=0,
     var postTextSize:Array<Int> = arrayOf<Int>(),
@@ -15,4 +17,6 @@ data class Post(
     var postFontFamily:Int=0,
     var postRadiuas:Int=0
 )
+
+
 

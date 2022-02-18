@@ -26,7 +26,7 @@ class Post2Lines(val context: Context) {
             postNum = 200
             lineNum = 2
             imageUri = "https://cdn.pixabay.com/photo/2014/09/16/01/19/girl-447701_1280.jpg"
-            postText = arrayOf(
+            postText = arrayListOf(
                 "אין בעיות בעולם",
                 "חוץ מאלה שאצלך בראש."
             )
@@ -56,7 +56,7 @@ class Post2Lines(val context: Context) {
             postNum = 201
             lineNum = 2
             imageUri = "https://cdn.pixabay.com/photo/2017/11/04/14/25/pinocchio-2917652_1280.jpg"
-            postText = arrayOf(
+            postText = arrayListOf(
                 "  לאמת פנים רבות  ",
                 "  אחד מהם הוא השקר."
             )
@@ -86,7 +86,7 @@ class Post2Lines(val context: Context) {
             postNum = 202
             lineNum = 2
             imageUri = "https://cdn.pixabay.com/photo/2019/03/31/07/37/black-hole-4092609_1280.jpg"
-            postText = arrayOf(
+            postText = arrayListOf(
                 "העתיד הוא ההיסטוריה",
                 "רק עם תאריך אחר."
             )
@@ -116,7 +116,7 @@ class Post2Lines(val context: Context) {
             postNum = 203
             lineNum = 2
             imageUri ="https://cdn.pixabay.com/photo/2018/02/13/22/02/light-3151723_1280.jpg"
-            postText = arrayOf(
+            postText = arrayListOf(
                 "ונתתי את האור וחושך לפניך",
                 "ובחרת באור."
             )
@@ -147,7 +147,7 @@ class Post2Lines(val context: Context) {
             postNum = 204
             lineNum = 2
             imageUri = "https://cdn.pixabay.com/photo/2021/01/09/21/09/antelope-5903514_1280.jpg"
-            postText = arrayOf(
+            postText = arrayListOf(
                 "אם אתה לא יכול להטיב את המצב",
                 "אז על תתערב."
             )
@@ -176,7 +176,7 @@ class Post2Lines(val context: Context) {
             postNum = 205
             lineNum = 2
             imageUri = "https://cdn.pixabay.com/photo/2020/01/06/10/16/theravada-buddhism-4745053_1280.jpg"
-            postText =  arrayOf(
+            postText =  arrayListOf(
                 "אי עשייה גוררת  אי עשייה ,",
                 "עשייה גוררת  עשייה."
             )
@@ -205,7 +205,7 @@ class Post2Lines(val context: Context) {
             postNum = 206
             lineNum = 2
             imageUri ="https://cdn.pixabay.com/photo/2015/09/16/21/07/egg-943413_1280.jpg"
-            postText =  arrayOf(
+            postText =  arrayListOf(
                 "ככל  שהחיים נעשים שבירים יותר,",
                 "כך הם  מובנים יותר."
             )
@@ -234,7 +234,7 @@ class Post2Lines(val context: Context) {
             postNum = 207
             lineNum = 2
             imageUri ="https://cdn.pixabay.com/photo/2020/01/14/19/09/crayon-4766037_1280.jpg"
-            postText = arrayOf(
+            postText = arrayListOf(
                 " האלוהים ברא את היצירה ",
                 " האדם  את  הביקורת. "
             )
@@ -263,7 +263,7 @@ class Post2Lines(val context: Context) {
             postNum = 208
             lineNum = 2
             imageUri ="https://cdn.pixabay.com/photo/2020/01/14/19/09/crayon-4766037_1280.jpg"
-            postText = arrayOf(
+            postText = arrayListOf(
                 "אתה בוחר מן הסתם להגיע למקומות מסוימים,",
                 "אבל החיים בוחרים לך את סוג החוויה שם."
             )
@@ -296,7 +296,7 @@ class Post2Lines(val context: Context) {
             postNum = 209
             lineNum = 2
             imageUri ="https://cdn.pixabay.com/photo/2019/09/26/17/39/pensioner-4506621_1280.jpg"
-            postText =  arrayOf(
+            postText =  arrayListOf(
                 "אם אין לך דרך אחרת זמינה טובה יותר,",
                 "אין טעם לקטר על הדרך בה אתה הולך."
             )
@@ -326,7 +326,7 @@ class Post2Lines(val context: Context) {
             postNum = 210
             lineNum = 2
             imageUri ="https://cdn.pixabay.com/photo/2016/06/23/21/04/fool-1476189_1280.jpg"
-            postText =  arrayOf(
+            postText =  arrayListOf(
                 "זה שאתה מאמין בהבלים",
                 "זה לא עושה אותם פחות הבלים."
             )
@@ -359,7 +359,7 @@ class Post2Lines(val context: Context) {
             postNum = 211
             lineNum = 2
             imageUri ="https://cdn.pixabay.com/photo/2015/08/09/19/29/people-882078_1280.jpg"
-            postText =   arrayOf(
+            postText =   arrayListOf(
                     "חכם לא עושה דברים",
             "שטיפש סובל מהם על בסיס קבוע."
             )
@@ -391,7 +391,7 @@ class Post2Lines(val context: Context) {
             postNum = 212
             lineNum = 2
             imageUri ="https://cdn.pixabay.com/photo/2017/08/16/03/04/chimp-2646308_1280.jpg"
-            postText = arrayOf(
+            postText = arrayListOf(
                     "הטיפש בטוח בחכמתו",
             "החכם בטוח בטיפשוטו."
             )
@@ -423,7 +423,7 @@ class Post2Lines(val context: Context) {
             postNum = 213
             lineNum = 2
             imageUri ="https://cdn.pixabay.com/photo/2018/02/21/16/59/human-3170876_1280.jpg"
-            postText = arrayOf(
+            postText = arrayListOf(
                 "   להיתפס כטמבל בעיני עצמך   ",
                 "זה הרבה יותר גרוע מלהיות טמבל."
             )
@@ -455,7 +455,7 @@ class Post2Lines(val context: Context) {
             postNum = 214
             lineNum = 2
             imageUri ="https://cdn.pixabay.com/photo/2016/09/21/04/46/barley-field-1684052_1280.jpg"
-            postText = arrayOf(
+            postText = arrayListOf(
                 "אתה לא יכול להרוויח משהו אמיתי בחיים האלה,",
                 "פרט לזכות הזאת לחיות את הרגע הזה."
             )
@@ -487,7 +487,7 @@ class Post2Lines(val context: Context) {
             postNum = 215
             lineNum = 2
             imageUri ="https://cdn.pixabay.com/photo/2018/09/22/11/34/board-3695073_1280.jpg"
-            postText = arrayOf(
+            postText = arrayListOf(
                 "ההצלחה שלך נמדדת",
                 "רק לפי האמונה שבך שאתה מצליח."
             )
@@ -519,7 +519,7 @@ class Post2Lines(val context: Context) {
             postNum = 216
             lineNum = 2
             imageUri ="https://cdn.pixabay.com/photo/2021/11/12/04/50/donkey-6787990_1280.jpg"
-            postText = arrayOf(
+            postText = arrayListOf(
                 "החיים האלה דורשים ממך להתנהל בהגיון,",
                 "למרות שהם עצמם ממש לא הגיוניים."
             )
@@ -551,7 +551,7 @@ class Post2Lines(val context: Context) {
             postNum = 217
             lineNum = 2
             imageUri ="https://cdn.pixabay.com/photo/2020/02/19/09/34/health-4861815_1280.jpg"
-            postText  = arrayOf(
+            postText  = arrayListOf(
                 "אתה לא מספיק טוב",
                 "כדי להבין כמה טוב."
             )

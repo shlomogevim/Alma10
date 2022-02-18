@@ -3,7 +3,7 @@ package com.sg.alma10.utilities
 const val CONSTANT_COLOR="constant"
 const val NOT_CONSTANT_COLOR="notConstant"
 
-const val POST_REF="Posts"
+const val POST_REF="po"
 const val POST_ID="post_id"
 const val POST_NUM="post_num"
 const val POST_LINE_NUM="post_lineNum"

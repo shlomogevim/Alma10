@@ -2,7 +2,6 @@ package com.sg.alma10.Posts.general
 
 import android.app.Activity
 import android.content.Context
-import android.provider.ContactsContract
 import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import coil.load
@@ -30,7 +29,7 @@ class Post7Lines(val context: Context) {
             postNum = 700
             lineNum =7
             imageUri ="https://cdn.pixabay.com/photo/2017/09/03/09/17/question-2709670_1280.jpg"
-            postText  = arrayOf(
+            postText  = arrayListOf(
                 "האדם שמחפש משמעות בחיים",
                 "דומה לאחד שקיבל כלי מופלא",
                 "והוא ממש נבוך מהמתנה הזו,",

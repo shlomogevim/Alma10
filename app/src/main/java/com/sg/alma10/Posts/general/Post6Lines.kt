@@ -28,7 +28,7 @@ class Post6Lines (val context: Context) {
             postNum = 600
             lineNum =6
             imageUri = "https://cdn.pixabay.com/photo/2021/03/27/05/10/pills-6127501_1280.jpg"
-            postText = arrayOf(
+            postText = arrayListOf(
                 "המיינד",
                 "הוא כדור הרגעה",
                 "מהאין סופיות של החיים,",
@@ -64,7 +64,7 @@ class Post6Lines (val context: Context) {
             postNum = 601
             lineNum =6
             imageUri = "https://cdn.pixabay.com/photo/2020/01/23/05/49/woman-4786974_1280.jpg"
-            postText = arrayOf(
+            postText = arrayListOf(
                 "אתה חי בתוך אגדה עתיקה",
                 "גן העדן והגיהנום נמצאים כאן ועכשיו,",
                 "ומי שמחליט לאיזה מחוזות תנוע בעולם הזה הוא:",
@@ -102,7 +102,7 @@ class Post6Lines (val context: Context) {
             postNum = 602
             lineNum =6
             imageUri = "https://cdn.pixabay.com/photo/2018/11/02/09/50/human-3789910_1280.jpg"
-            postText = arrayOf(
+            postText = arrayListOf(
                 "הגאומטריה של הסבל",
                 "במשולש הקיום שלך שלשה קודקודים: ",
                 "מה שאתה צריך,",
@@ -141,7 +141,7 @@ class Post6Lines (val context: Context) {
             postNum = 603
             lineNum =6
             imageUri ="https://cdn.pixabay.com/photo/2018/01/26/08/32/nature-3108066__480.jpg"
-            postText = arrayOf(
+            postText = arrayListOf(
                 " גן העדן והגיהנום ",
                 "הם לא מקומות",
                 "בעולם הבא,",

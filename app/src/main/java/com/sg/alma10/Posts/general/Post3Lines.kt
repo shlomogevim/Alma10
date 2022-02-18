@@ -5,17 +5,23 @@ import android.content.Context
 import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import coil.load
+import com.google.firebase.firestore.FirebaseFirestore
 import com.sg.alma10.Posts.PostGeneratorNew
+import com.sg.alma10.Posts.PostGeneratorNew1
 import com.sg.alma10.R
 import com.sg.alma10.model.Post
+import com.sg.alma10.model.Post1
 import com.sg.alma10.utilities.CONSTANT_COLOR
+import com.sg.alma10.utilities.POST_REF
 import com.sg.alma10.utilities.Utility
+import java.util.ArrayList
 
 class Post3Lines(val context: Context) {
 
     private val image: ImageView = (context as Activity).findViewById(R.id.imageView)
     private val layout: ConstraintLayout = (context as Activity).findViewById(R.id.mainLayout)
     private val postCreatorNew = PostGeneratorNew(context, layout)
+    private val postCreatorNew1 = PostGeneratorNew1(context, layout)
     private val util=Utility()
 
 
@@ -27,7 +33,7 @@ class Post3Lines(val context: Context) {
             postNum = 300
             lineNum =3
             imageUri ="https://cdn.pixabay.com/photo/2016/04/05/03/18/prayer-1308663_1280.jpg"
-            postText  = arrayOf(
+            postText  = arrayListOf(
                 "הבלי עולם הזה",
                 "זו המציאות הרגילה",
                 "שאין בה קורטוב של קדושה.",
@@ -62,7 +68,7 @@ class Post3Lines(val context: Context) {
             postNum = 301
             lineNum =3
             imageUri ="https://cdn.pixabay.com/photo/2016/11/18/17/04/crops-1835847_1280.jpg"
-            postText  = arrayOf(
+            postText  = arrayListOf(
                 "הדרך שלך",
                 "היא לא תמיד הכי נוחה בעולם,",
                 "אבל היא תמיד הדרך שלך.",
@@ -96,7 +102,7 @@ class Post3Lines(val context: Context) {
             postNum = 302
             lineNum =3
             imageUri ="https://cdn.pixabay.com/photo/2018/04/06/08/11/father-and-son-3295190_1280.jpg"
-            postText  = arrayOf(
+            postText  = arrayListOf(
                 "בזמן באחרון",
                 "נראה לי שאני צריך את אלוהים",
                 "קצת יותר ממה שהוא צריך אותי.",
@@ -130,7 +136,7 @@ class Post3Lines(val context: Context) {
             postNum = 303
             lineNum =3
             imageUri ="https://cdn.pixabay.com/photo/2017/08/04/18/34/monster-2580974_1280.jpg"
-            postText  = arrayOf(
+            postText  = arrayListOf(
                 "עוצמת השדים שלך",
                 "תלויה",
                 "בחשיבות שאתה מעניק להם.",
@@ -164,7 +170,7 @@ class Post3Lines(val context: Context) {
             postNum = 304
             lineNum =3
             imageUri ="https://cdn.pixabay.com/photo/2017/05/31/09/11/tree-2359577_1280.jpg"
-            postText = arrayOf(
+            postText = arrayListOf(
                 "המשמעות (הכללית) של החיים",
                 "מוגדרת במדויק על ידי",
                 "חוסר המשמעות (הפרטית) שלהם.",
@@ -198,7 +204,7 @@ class Post3Lines(val context: Context) {
             postNum = 305
             lineNum =3
             imageUri ="https://cdn.pixabay.com/photo/2021/11/20/05/15/car-6810885_1280.jpg"
-            postText = arrayOf(
+            postText = arrayListOf(
                 "החיים קורים,",
                 "זה שאתה בטוח שהם קורים לך",
                 "זו פשוט טעות כואבת.",
@@ -224,38 +230,106 @@ class Post3Lines(val context: Context) {
         }
         postCreatorNew.createPost(post)
     }
+
     fun post306() {
         val imageUri1 ="https://cdn.pixabay.com/photo/2021/01/08/17/02/old-man-5900410_1280.jpg"
         image.load(imageUri1)
-        val post = Post()
+        val post = Post1()
         with(post) {
             postNum = 306
             lineNum =3
             imageUri ="https://cdn.pixabay.com/photo/2021/01/08/17/02/old-man-5900410_1280.jpg"
-            postText = arrayOf(
+            postText = arrayListOf(
                 "המתכון הבטוח שלא  להזדקן",
                 "הוא פשוט",
                 "להישאר צעיר.",
             )
             val di=0
             val dd=0
-            postMargin = arrayOf(
+            postMargin = arrayListOf(
                 arrayOf(0,0+di,0,-1+dd),
                 arrayOf(0,90+di, 0, -1+dd),
                 arrayOf(0,135+di, 0,-1+dd)
             )
+         /*    val arr1=convertArrayToString(postMargin)
+            util.logi("post3Line16=> \n arr1= $arr1")*/
+
             postBackground ="a3842c"
             postTransparency =7
             val size1=25
             val size2=0
-            postTextSize =  arrayOf(0, size1,size2)
-            postPadding =  arrayOf(10, 0,10,0)
-            postTextColor = arrayOf(CONSTANT_COLOR, "#ffffff")
+            postTextSize =  arrayListOf(0, size1,size2)
+            postPadding =  arrayListOf(10, 0,10,0)
+            postTextColor = arrayListOf(CONSTANT_COLOR, "#ffffff")
             postFontFamily =4
             postRadiuas = 15
         }
-        postCreatorNew.createPost(post)
+        postCreatorNew1.createPost(post)
+       //  util.addPostToFirestore(post)
+
+        FirebaseFirestore.getInstance().collection(POST_REF).addSnapshotListener { value, error ->
+            if (value != null) {
+                for (doc in value.documents){
+                    val post1=util.convertToPost(doc)
+                    util.logi("Post3Line11=> /n post1=$post1")
+
+
+                }
+            }
+
+        }
+
+
+
     }
+
+    private fun convertArrayToString(postMargin: ArrayList<Array<Int>>):ArrayList<String> {
+        var arr= arrayListOf<String>()
+       for (index in 0 until postMargin.size){
+            val doc =postMargin[index]
+             val mem=doc.toString()
+             //util.logi("post3Line => \n mem= $mem")
+              arr.add(mem)
+        }
+   return arr
+    }
+
+
+    /* fun post306() {
+         val imageUri1 ="https://cdn.pixabay.com/photo/2021/01/08/17/02/old-man-5900410_1280.jpg"
+         image.load(imageUri1)
+         val post = Post()
+         with(post) {
+             postNum = 306
+             lineNum =3
+             imageUri ="https://cdn.pixabay.com/photo/2021/01/08/17/02/old-man-5900410_1280.jpg"
+             postText = arrayListOf(
+                 "המתכון הבטוח שלא  להזדקן",
+                 "הוא פשוט",
+                 "להישאר צעיר.",
+             )
+             val di=0
+             val dd=0
+             postMargin = arrayOf(
+                 arrayOf(0,0+di,0,-1+dd),
+                 arrayOf(0,90+di, 0, -1+dd),
+                 arrayOf(0,135+di, 0,-1+dd)
+             )
+             postBackground ="a3842c"
+             postTransparency =7
+             val size1=25
+             val size2=0
+             postTextSize =  arrayOf(0, size1,size2)
+             postPadding =  arrayOf(10, 0,10,0)
+             postTextColor = arrayOf(CONSTANT_COLOR, "#ffffff")
+             postFontFamily =4
+             postRadiuas = 15
+         }
+         postCreatorNew.createPost(post)
+         util.addPostToFirestore(post)
+
+
+     }*/
 /*
 
 

@@ -2,7 +2,6 @@ package com.sg.alma10.Posts.general
 
 import android.app.Activity
 import android.content.Context
-import android.provider.ContactsContract
 import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import coil.load
@@ -10,7 +9,6 @@ import com.sg.alma10.Posts.PostGeneratorNew
 import com.sg.alma10.R
 import com.sg.alma10.model.Post
 import com.sg.alma10.utilities.CONSTANT_COLOR
-import com.sg.alma10.utilities.NOT_CONSTANT_COLOR
 import com.sg.alma10.utilities.Utility
 
 class Post5Lines(val context: Context) {
@@ -30,7 +28,7 @@ class Post5Lines(val context: Context) {
             postNum = 500
             lineNum =5
             imageUri ="https://cdn.pixabay.com/photo/2018/12/02/20/26/till-eulenspiegel-3852068_1280.jpg"
-            postText  = arrayOf(
+            postText  = arrayListOf(
                 " ההבדל בין: ",
                 "טמבל רגיל",
                 " לטמבל עם תואר של דוקטור, ",

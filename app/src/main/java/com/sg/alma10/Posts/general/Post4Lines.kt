@@ -28,7 +28,7 @@ class Post4Lines(val context: Context) {
             postNum = 400
             lineNum =4
             imageUri ="https://cdn.pixabay.com/photo/2020/01/21/11/39/running-4782722_1280.jpg"
-            postText  = arrayOf(
+            postText  = arrayListOf(
                 "על תהיה הכי טוב",
                 "זה לא יצליח לך לאורך זמן,",
                 " לך על משהו יותר ממשי",
@@ -64,7 +64,7 @@ class Post4Lines(val context: Context) {
             postNum = 401
             lineNum =4
             imageUri ="https://cdn.pixabay.com/photo/2018/03/01/09/26/people-3190181_1280.jpg"
-            postText = arrayOf(
+            postText = arrayListOf(
                 " פסימיות ",
                 " זה לחשוב שיש מישהו מאושר ממך, ",
                 " אופטימיות ",

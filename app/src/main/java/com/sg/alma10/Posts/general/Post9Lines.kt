@@ -2,7 +2,6 @@ package com.sg.alma10.Posts.general
 
 import android.app.Activity
 import android.content.Context
-import android.provider.ContactsContract
 import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import coil.load
@@ -10,7 +9,6 @@ import com.sg.alma10.Posts.PostGeneratorNew
 import com.sg.alma10.R
 import com.sg.alma10.model.Post
 import com.sg.alma10.utilities.CONSTANT_COLOR
-import com.sg.alma10.utilities.NOT_CONSTANT_COLOR
 import com.sg.alma10.utilities.Utility
 
 class Post9Lines(val context: Context) {
@@ -29,7 +27,7 @@ class Post9Lines(val context: Context) {
             postNum = 900
             lineNum = 9
             imageUri = "https://cdn.pixabay.com/photo/2017/02/06/11/58/desert-2042738_1280.jpg"
-            postText = arrayOf(
+            postText = arrayListOf(
                 "זה שהסתדרת עם השנים זה לא אומר שאתה מסודר,",
                 "זה שאתה עסוק כל הזמן זה לא אומר שאתה עושה משהו,",
                 "זה שאתה אוכל כל הזמן זה לא אומר שאתה שבע,",

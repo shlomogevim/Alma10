@@ -24,7 +24,7 @@ class Post1Lines(val context: Context) {
             postNum=100
              lineNum = 1
              imageUri = "https://cdn.pixabay.com/photo/2015/08/26/11/06/people-talking-908342_1280.jpg"
-            postText = arrayOf(
+            postText = arrayListOf(
                 "כל אחד מדבר את מה שהוא."
             )
             val dd=0
@@ -49,7 +49,7 @@ class Post1Lines(val context: Context) {
             postNum=101
             lineNum = 1
             imageUri ="https://cdn.pixabay.com/photo/2018/02/13/23/41/nature-3151869_1280.jpg"
-            postText  = arrayOf(
+            postText  = arrayListOf(
                 "אתה הוא האור שבו אתה חי."
             )
             val dd=0
@@ -74,7 +74,7 @@ class Post1Lines(val context: Context) {
             postNum=102
             lineNum = 1
             imageUri ="https://cdn.pixabay.com/photo/2013/07/18/15/09/death-164761_1280.jpg"
-            postText  = arrayOf(
+            postText  = arrayListOf(
                 "גם מחיים שלווים לגמרי מתים בסוף."
             )
             val dd=0
