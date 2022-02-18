@@ -2,11 +2,9 @@ package com.sg.alma10.Posts.general
 
 import android.app.Activity
 import android.content.Context
-import android.provider.ContactsContract
 import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import coil.load
-import com.sg.alma10.Posts.PostGenerator
 import com.sg.alma10.Posts.PostGeneratorNew
 import com.sg.alma10.R
 import com.sg.alma10.model.Post
@@ -18,126 +16,127 @@ class Post2Lines(val context: Context) {
 
     private val image: ImageView = (context as Activity).findViewById(R.id.imageView)
     private val layout: ConstraintLayout = (context as Activity).findViewById(R.id.mainLayout)
-    private val postCreator =PostGenerator(context, layout)
-    private val postCreatorNew = PostGeneratorNew(context, layout)
+   private val postCreatorNew = PostGeneratorNew(context, layout)
     private val util=Utility()
     fun post200() {
-        val lineNum = 2
-        val imageUri = "https://cdn.pixabay.com/photo/2014/09/16/01/19/girl-447701_1280.jpg"
-        image.load(imageUri)
-        image.scaleType=ImageView.ScaleType.FIT_CENTER
-        val postText = arrayOf(
-            "אין בעיות בעולם",
-            "חוץ מאלה שאצלך בראש."
-        )
-        val dd=0
-        val du=0
-        val marginA = arrayOf(
-            arrayOf(0, -1+du, 0, 32+dd),
-            arrayOf(0, -1+du, 0, 0+dd)
-        )
-        val backGround = "000000"
-        val transparency =6
-        val size1=24
-        val size2=28
-        val textSizeA = arrayOf(0,size1,size2,size2, size2,size2, size2)
-        val paddingA = arrayOf(0, 0,0, 0)
-        val col ="#ffffff"
-        val col1 = "#F4611E"
-        val textColorA = arrayOf(CONSTANT_COLOR, col, col1, col1, col1, col1, col1)
-        val fontFamily=430
-        val radius=5
-        postCreator.createPost(
-            lineNum,postText,backGround,transparency,marginA,paddingA,textSizeA,textColorA,fontFamily,radius
-        )
+        val imageUri1 = "https://cdn.pixabay.com/photo/2014/09/16/01/19/girl-447701_1280.jpg"
+        image.load(imageUri1)
+        val post = Post()
+        with(post) {
+            postNum = 200
+            lineNum = 2
+            imageUri = "https://cdn.pixabay.com/photo/2014/09/16/01/19/girl-447701_1280.jpg"
+            postText = arrayOf(
+                "אין בעיות בעולם",
+                "חוץ מאלה שאצלך בראש."
+            )
+            val di = 20
+            val du=0
+            postMargin =  arrayOf(
+                arrayOf(0, -1+du, 0, 32+di),
+                arrayOf(0, -1+du, 0, 0+di)
+            )
+            postBackground = "000000"
+            postTransparency = 6
+            val size1=24
+            postTextSize = arrayOf(0, size1)
+            postPadding = arrayOf(0, 0, 0, 0)
+            val col =  "#ffffff"
+            postTextColor = arrayOf(CONSTANT_COLOR, col)
+            postFontFamily =430
+            postRadiuas = 15
+        }
+        postCreatorNew.createPost(post)
     }
     fun post201() {
-        val lineNum = 2
-        val imageUri = "https://cdn.pixabay.com/photo/2017/11/04/14/25/pinocchio-2917652_1280.jpg"
-        image.load(imageUri)
-        val postText = arrayOf(
-            "  לאמת פנים רבות  ",
-            "  אחד מהם הוא השקר."
-        )
-        val dd=0
-        val du=0
-        val marginA = arrayOf(
-            arrayOf(0, 10+du, 0, -1+dd),
-            arrayOf(0, 50+du, 0, -1+dd)
-        )
-        val backGround = "263238"
-        val transparency =2
-        val size1=26
-        val size2=28
-        val textSizeA = arrayOf(0,size1,size2,size2, size2,size2, size2)
-        val paddingA = arrayOf(0, 0,0, 0)
-        val col ="#a7aba8"
-        val col1 = "#F4611E"
-        val textColorA = arrayOf(CONSTANT_COLOR, col, col1, col1, col1, col1, col1)
-        val fontFamily=100
-        val radius=5
-        postCreator.createPost(
-            lineNum,postText,backGround,transparency,marginA,paddingA,textSizeA,textColorA,fontFamily,radius
-        )
+        val imageUri1 = "https://cdn.pixabay.com/photo/2017/11/04/14/25/pinocchio-2917652_1280.jpg"
+        image.load(imageUri1)
+        val post = Post()
+        with(post) {
+            postNum = 201
+            lineNum = 2
+            imageUri = "https://cdn.pixabay.com/photo/2017/11/04/14/25/pinocchio-2917652_1280.jpg"
+            postText = arrayOf(
+                "  לאמת פנים רבות  ",
+                "  אחד מהם הוא השקר."
+            )
+            val di = 0
+            val du=0
+            postMargin =  arrayOf(
+                arrayOf(0, 10+du, 0, -1+di),
+                arrayOf(0, 50+du, 0, -1+di)
+            )
+            postBackground = "263238"
+            postTransparency = 2
+            val size1=26
+            postTextSize = arrayOf(0, size1)
+            postPadding = arrayOf(0, 0, 0, 0)
+            val col = "#a7aba8"
+            postTextColor = arrayOf(CONSTANT_COLOR, col)
+            postFontFamily =100
+            postRadiuas = 5
+        }
+        postCreatorNew.createPost(post)
     }
-
     fun post202() {
-        val lineNum = 2
-        var imageUri="https://cdn.pixabay.com/photo/2019/03/31/07/37/black-hole-4092609_1280.jpg"
-        image.load(imageUri)
-         val postText = arrayOf(
-            "העתיד הוא ההיסטוריה",
-            "רק עם תאריך אחר."
-        )
-        val dd=0
-        val du=0
-        val marginA = arrayOf(
-            arrayOf(0, -1+du, 0, 55+dd),
-            arrayOf(0, -1+du, 0, 10+dd)
-        )
-        val backGround = "263238"
-        val transparency = 0
-        val size1=29
-        val size2=28
-        val textSizeA = arrayOf(0,size1,size2,size2, size2,size2, size2)
-        val paddingA = arrayOf(10, 0, 10, 0)
-        val col = "#b3b7b4"
-        val col1 = "#F4611E"
-        val textColorA = arrayOf(CONSTANT_COLOR, col, col1, col1, col1, col1, col1)
-        val fontFamily=509
-        val radius=5
-        postCreator.createPost(
-            lineNum,postText,backGround,transparency,marginA,paddingA,textSizeA,textColorA,fontFamily,radius
-        )
+        val imageUri1 ="https://cdn.pixabay.com/photo/2019/03/31/07/37/black-hole-4092609_1280.jpg"
+        image.load(imageUri1)
+        val post = Post()
+        with(post) {
+            postNum = 202
+            lineNum = 2
+            imageUri = "https://cdn.pixabay.com/photo/2019/03/31/07/37/black-hole-4092609_1280.jpg"
+            postText = arrayOf(
+                "העתיד הוא ההיסטוריה",
+                "רק עם תאריך אחר."
+            )
+            val di = 0
+            val du=0
+            postMargin =  arrayOf(
+                arrayOf(0, -1+du, 0, 55+di),
+                arrayOf(0, -1+du, 0, 10+di)
+            )
+            postBackground = "263238"
+            postTransparency =0
+            val size1=29
+            postTextSize = arrayOf(0, size1)
+            postPadding = arrayOf(0, 0, 0, 0)
+            val col ="#b3b7b4"
+            postTextColor = arrayOf(CONSTANT_COLOR, col)
+            postFontFamily =509
+            postRadiuas = 5
+        }
+        postCreatorNew.createPost(post)
     }
     fun post203() {
-        val lineNum=2
-        val imageUri="https://cdn.pixabay.com/photo/2018/02/13/22/02/light-3151723_1280.jpg"
-        image.load(imageUri)
-        val postText = arrayOf(
-            "ונתתי את האור וחושך לפניך",
-            "ובחרת באור."
-        )
-        val dd=0
-        val du=0
-        val marginA = arrayOf(
-            arrayOf(0, -1+du, 0, 45+dd),
-            arrayOf(0, -1+du, 0, 10+dd)
-        )
-        val backGround = "263238"
-        val transparency = 4
-        val size1=25
-        val size2=28
-        val textSizeA = arrayOf(0,size1,size2,size2, size2,size2, size2)
-        val paddingA = arrayOf(0, 0, 0, 0)
-        val col = "#f6ff03"
-        val col1 = "#F4611E"
-        val textColorA = arrayOf(CONSTANT_COLOR, col, col1, col1, col1, col1, col1)
-        val fontFamily=551
-        val radius=15
-        postCreator.createPost(
-            lineNum,postText,backGround,transparency,marginA,paddingA,textSizeA,textColorA,fontFamily,radius
-        )
+        val imageUri1 ="https://cdn.pixabay.com/photo/2018/02/13/22/02/light-3151723_1280.jpg"
+        image.load(imageUri1)
+        val post = Post()
+        with(post) {
+            postNum = 203
+            lineNum = 2
+            imageUri ="https://cdn.pixabay.com/photo/2018/02/13/22/02/light-3151723_1280.jpg"
+            postText = arrayOf(
+                "ונתתי את האור וחושך לפניך",
+                "ובחרת באור."
+            )
+            val di = 0
+            val du=0
+            postMargin =  arrayOf(
+                arrayOf(0, -1+du, 0, 45+di),
+                arrayOf(0, -1+du, 0, 10+di)
+            )
+            postBackground = "263238"
+            postTransparency =4
+            val size1=25
+            postTextSize = arrayOf(0, size1)
+            postPadding = arrayOf(0, 0, 0, 0)
+            val col ="#f6ff03"
+            postTextColor = arrayOf(CONSTANT_COLOR, col)
+            postFontFamily =501
+            postRadiuas = 15
+        }
+        postCreatorNew.createPost(post)
     }
 
     fun post204() {

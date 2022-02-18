@@ -2,9 +2,30 @@ package com.sg.alma10.utilities
 
 import android.util.Log
 import com.google.firebase.firestore.DocumentSnapshot
+import com.google.firebase.firestore.FirebaseFirestore
 import com.sg.alma10.model.Post
 
 class Utility {
+
+    fun addPostToFirestore(post:Post){
+        val data=HashMap<String,Any>()
+        with (post){
+           data[POST_ID] =1
+           data[POST_NUM] =postNum
+           data[POST_LINE_NUM] =lineNum
+           data[POST_IMAGE_URI] =imageUri
+           data[POST_TEXT] =postText
+           data[POST_MARGIN] =postMargin
+           data[POST_BACKGROUND] =postBackground
+           data[POST_TRANPARECY] =postTransparency
+           data[POST_TEXT_SIZE] =postTextSize
+           data[POST_PADDING] =postPadding
+           data[POST_TEXT_COLOR] =postTextColor
+           data[POST_FONT_FAMILY] =postFontFamily
+           data[POST_RADIUS] =postRadiuas
+        }
+        FirebaseFirestore.getInstance().collection(POST_REF).add(data)
+    }
     fun convertToPost(snap: DocumentSnapshot?): Post {
         val postId = snap?.getString(POST_ID).toString()
         val postNum = snap?.getLong(POST_NUM)!!.toInt()
@@ -19,7 +40,7 @@ class Utility {
         val postTextColor: Array<String> = snap?.get(POST_TEXT_COLOR) as Array<String>
         val postFontFamily= snap?.getLong(POST_FONT_FAMILY)!!.toInt()
         val postRadius= snap?.getLong(POST_RADIUS)!!.toInt()
-        val newPost=Post(postId,postNum,lineNum,imageUri,postText,postMargin,postBackground,postTranparency,postTextSize,postPadding,postTextColor,postFontFamily,postRadius )
+        val newPost=Post(postId,postNum,lineNum!!,imageUri,postText,postMargin,postBackground,postTranparency,postTextSize,postPadding,postTextColor,postFontFamily,postRadius )
         return newPost
     }
     fun logi(

@@ -2,16 +2,13 @@ package com.sg.alma10.Posts.general
 
 import android.app.Activity
 import android.content.Context
-import android.provider.ContactsContract
 import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import coil.load
-import com.sg.alma10.Posts.PostGenerator
 import com.sg.alma10.Posts.PostGeneratorNew
 import com.sg.alma10.R
 import com.sg.alma10.model.Post
 import com.sg.alma10.utilities.CONSTANT_COLOR
-import com.sg.alma10.utilities.NOT_CONSTANT_COLOR
 import com.sg.alma10.utilities.Utility
 
 class Post3Lines(val context: Context) {
@@ -193,62 +190,74 @@ class Post3Lines(val context: Context) {
         }
         postCreatorNew.createPost(post)
     }
-/*
-        fun post35() {
-            image.load(R.drawable.people)
-            val backGround = "546e7a"
-            val tranparency = 8
-            val lineA = arrayOf(
-                "החיים קורים ,",
+    fun post305() {
+        val imageUri1 ="https://cdn.pixabay.com/photo/2021/11/20/05/15/car-6810885_1280.jpg"
+        image.load(imageUri1)
+        val post = Post()
+        with(post) {
+            postNum = 305
+            lineNum =3
+            imageUri ="https://cdn.pixabay.com/photo/2021/11/20/05/15/car-6810885_1280.jpg"
+            postText = arrayOf(
+                "החיים קורים,",
                 "זה שאתה בטוח שהם קורים לך",
                 "זו פשוט טעות כואבת.",
             )
-            val marginA = arrayOf(
-                arrayOf(0, 5, 0, -1),
-                arrayOf(0, 36, 0, -1),
-                arrayOf(0, 100, 0, -1)
+            val di=0
+            val dd=0
+            postMargin = arrayOf(
+                arrayOf(0,0+di,0,-1+dd),
+                arrayOf(0,42+di, 0, -1+dd),
+                arrayOf(0,110+di, 0,-1+dd)
             )
-            val paddingA = arrayOf(0, 0, 0, 0)
-            // val textSizeA = arrayOf(0, 25)
-            val textSizeA = arrayOf(0, 23, 20, 23)
-            //val textColorA = arrayOf(CONSTANT, "#f6ff03")
-            //  val col = "#f6ff03"
-            val col = "#f6ff03"
-            val textColorA = arrayOf(CONSTANT, col, col)
-
-            nineLinesPost.createPost(
-                lineNum, backGround, tranparency, lineA, marginA, paddingA, textSizeA, textColorA,
-                radius = 20, fontFamily = 1
-            )
+            postBackground ="f6b60d"
+            postTransparency =7
+            val size1=20
+            val size2=0
+            postTextSize =  arrayOf(0, size1,size2)
+            postPadding =  arrayOf(10, 0,10,0)
+            val col = "#000000"
+            val col1 = "#4dd0e1"
+            postTextColor = arrayOf(CONSTANT_COLOR, col, col1, col1)
+            postFontFamily =103
+            postRadiuas = 15
         }
-
-        fun post36() {
-            image.load(R.drawable.old_and_haapy)
-            val backGround = "546e7a"
-            val tranparency = 8
-            val lineA = arrayOf(
+        postCreatorNew.createPost(post)
+    }
+    fun post306() {
+        val imageUri1 ="https://cdn.pixabay.com/photo/2021/01/08/17/02/old-man-5900410_1280.jpg"
+        image.load(imageUri1)
+        val post = Post()
+        with(post) {
+            postNum = 306
+            lineNum =3
+            imageUri ="https://cdn.pixabay.com/photo/2021/01/08/17/02/old-man-5900410_1280.jpg"
+            postText = arrayOf(
                 "המתכון הבטוח שלא  להזדקן",
                 "הוא פשוט",
                 "להישאר צעיר.",
             )
-            val marginA = arrayOf(
-                arrayOf(0, -1, 0, 80),
-                arrayOf(0, -1, 0, 40),
-                arrayOf(0, -1, 0, 0)
+            val di=0
+            val dd=0
+            postMargin = arrayOf(
+                arrayOf(0,0+di,0,-1+dd),
+                arrayOf(0,90+di, 0, -1+dd),
+                arrayOf(0,135+di, 0,-1+dd)
             )
-            val paddingA = arrayOf(10, 0, 10, 0)
-            // val textSizeA = arrayOf(0, 25)
-            val textSizeA = arrayOf(0, 25, 20, 23)
-            //val textColorA = arrayOf(CONSTANT, "#f6ff03")
-            //  val col = "#f6ff03"
-            val col = "#f6ff03"
-            val textColorA = arrayOf(CONSTANT, col, col)
-
-            nineLinesPost.createPost(
-                lineNum, backGround, tranparency, lineA, marginA, paddingA, textSizeA, textColorA,
-                radius = 20, fontFamily = 4
-            )
+            postBackground ="a3842c"
+            postTransparency =7
+            val size1=25
+            val size2=0
+            postTextSize =  arrayOf(0, size1,size2)
+            postPadding =  arrayOf(10, 0,10,0)
+            postTextColor = arrayOf(CONSTANT_COLOR, "#ffffff")
+            postFontFamily =4
+            postRadiuas = 15
         }
+        postCreatorNew.createPost(post)
+    }
+/*
+
 
         fun post37() {
             image.load(R.drawable.tv)
